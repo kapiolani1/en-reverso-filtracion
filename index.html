@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EN REVERSO... en reversa</title>
+    <!-- Incluye Tailwind CSS para un estilo moderno y adaptable -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importa la tipografía "Bytesized" de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Bytesized&display=swap');
+        body {
+            font-family: 'Bytesized', sans-serif; /* Aplica la tipografía a toda la página */
+            background-color: #181935; /* Un fondo negro más profundo */
+            color: #d1d5db; /* Color de texto gris claro */
+        }
+        .letras-brillantes {
+            /* Efecto de resplandor para el texto, ahora en un tono más azul */
+            text-shadow: 0 0 5px #60a5fa, 0 0 20px #22388E, 0 0 30px #60a5fa;
+        }
+        .reproductor-container {
+            background-color: #534093; /* Fondo del reproductor en gris oscuro */
+            border: 1px solid #374151; /* Borde sutil */
+        }
+        audio::-webkit-media-controls-panel {
+            background-color: #7BB5EF; /* Color del panel de controles del audio */
+        }
+        input, textarea {
+            background-color: #534093;
+            border: 1px solid #4b5563;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #534093;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4">
+
+    <!-- Contenedor principal centrado -->
+    <main class="w-full max-w-2xl mx-auto text-center">
+        <!-- Título principal con efecto de resplandor y gradiente de color -->
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 md:mb-6 letras-brillantes bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
+            SE HA FILTRADO "EN REVERSO"...
+            ¿en reversa?
+        </h1>
+
+        <!-- Subtítulo intrigante -->
+        <p class="text-lg sm:text-xl text-gray-400 mb-8 md:mb-12">
+            Se ha filtrado En Reverso. más bien, un pedazo de la canción. Pero está en reversa. Escúchala aquí antes que nadie
+        </p>
+
+        <!-- Contenedor del reproductor de audio -->
+        <div class="reproductor-container p-6 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105">
+            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-white">
+                "AUDIO EN REVERSO (1)"
+            </h2>
+            <audio id="audioPlayer" controls class="w-full rounded-full bg-gray-700">
+                <!-- Se debe reemplazar el src con el archivo de audio real -->
+                <source src="EN REVERSO JUL 2025 13 FINAL(1) (mp3cut.net).mp3" type="audio/mpeg">
+                Tu navegador no es compatible con el elemento de audio.
+            </audio>
+            <!-- Descripción del audio -->
+            <p class="mt-4 text-sm text-gray-500">
+                Este es un audio en reversa... ¿qué dice?
+            </p>
+        </div>
+
+        <!-- Sección del formulario de contacto para enviar un mensaje -->
+        <div class="mt-12 md:mt-16 text-left">
+            <h3 class="text-2xl font-bold mb-4 text-white">
+                Si lo has descifrado, escribe la letra y recibas una sorpresa muy pronto ...
+            </h3>
+            <!-- El formulario usa un enlace mailto: para abrir el cliente de correo del usuario -->
+            <!-- ¡IMPORTANTE! Reemplaza 'tu-correo@ejemplo.com' con tu dirección de correo electrónico real -->
+            <form action="mailto:kapiolanimusica@gmail.com" method="post" enctype="text/plain" class="space-y-4">
+                <div>
+                    <label for="nombre" class="block text-sm font-medium text-gray-400 mb-1">Tu nombre o email</label>
+                    <input type="text" id="nombre" name="Nombre" class="w-full p-2 rounded-lg text-white" placeholder="Tu nombre o email">
+                </div>
+                <div>
+                    <label for="mensaje" class="block text-sm font-medium text-gray-400 mb-1">Tu mensaje</label>
+                    <textarea id="mensaje" name="Mensaje" rows="4" class="w-full p-2 rounded-lg text-white" placeholder="Escribe tu mensaje aquí..."></textarea>
+                </div>
+                <button type="submit" class="w-full px-4 py-2 bg-blue-300 text-white font-bold rounded-lg shadow-lg hover:bg-blue-450 transition-colors duration-200">
+                    Enviar respuesta
+                </button>
+            </form>
+            <p class="mt-4 text-sm text-gray-500 text-center">
+                Al enviar, se abrirá tu programa de correo para que nos envíes tu mensaje.
+            </p>
+        </div>
+        
+        <!-- Créditos de la tipografía -->
+        <div class="mt-8 text-xs text-gray-600">
+            <p>Font: <a href="https://fonts.google.com/specimen/Bytesized?query=pixel" target="_blank" class="hover:underline">Bytesized</a>, designed by <span class="font-bold">Baltdev</span>.</p>
+        </div>
+    </main>
+
+</body>
+</html>

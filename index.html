@@ -21,7 +21,7 @@
 
         body {
             font-family: 'Tiny5', sans-serif; /* Aplica la tipografía a toda la página */
-            background-color: #181935; /* Un fondo negro más profundo */
+            background-color: #000010; /* Fondo negro puro */
             color: #d1d5db; /* Color de texto gris claro */
         }
         .title-font {
@@ -50,8 +50,8 @@
 </head>
 <body class="flex items-center justify-center min-h-screen p-4">
 
-    <!-- Contenedor principal centrado -->
-    <main class="w-full max-w-2xl mx-auto text-center">
+    <!-- Contenedor principal centrado. Se ha aumentado el padding para más espacio vertical. -->
+    <main class="w-full max-w-2xl mx-auto text-center p-8">
         <!-- Título principal con efecto de resplandor y color blanco -->
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-8 md:mb-12 letras-brillantes text-white title-font">
             En Reverso...
@@ -64,45 +64,20 @@
 
          <!-- Subtítulo intrigante -->
         <p class="text-lg sm:text-xl text-gray-400 mb-8 md:mb-12">
-            Se ha filtrado un pedazo de la canción y está al revés.
+            Se ha filtrado un pedazo de la canción... pero está al revés................   
+             Para acceder, ingresa los 4 dígitos.
         </p>
 
-         <!-- Subtítulo intrigante -->
-        <p class="text-lg sm:text-xl text-gray-400 mb-8 md:mb-12">
-            Escúchala aquí antes que nadie e intenta descifrar de qué trata esta canción.
-        </p>
-
-        <!-- Contenedor del reproductor de audio -->
-        <div class="reproductor-container p-6 rounded-2xl shadow-xl transition-transform duration-300 hover:scale-105">
-            <h2 class="text-2xl sm:text-3xl font-semibold mb-4 text-white">
-                "AUDIO EN REVERSO (1)"
-            </h2>
-            <audio id="audioPlayer" controls class="w-full rounded-full bg-gray-700">
-                <!-- Se debe reemplazar el src con el archivo de audio real -->
-                <source src="EN REVERSO JUL 2025 13 FINAL(1) (mp3cut.net).mp3" type="audio/mpeg">
-                Tu navegador no es compatible con el elemento de audio.
-            </audio>
-            <!-- Botón de descarga -->
-            <a href="EN REVERSO JUL 2025 13 FINAL(1) (mp3cut.net).mp3" download class="mt-4 inline-block px-6 py-2 bg-blue-300 text-white font-bold rounded-lg shadow-lg hover:bg-blue-450 transition-colors duration-200">
-                Descargar
-            </a>
-            <!-- Descripción del audio -->
-            <p class="mt-4 text-sm text-gray-100">
-                Este es un audio en reversa... ¿qué dice?
-            </p>
-        </div>
-
-        <!-- Agregado: Imagen de arte ASCII después del reproductor -->
-        <img src="ascii-art.png" alt="Imagen de arte ASCII" class="mt-8 w-full rounded-lg shadow-xl" />
+    
 
         <!-- Sección de código de acceso -->
         <div class="mt-12 md:mt-16 text-left">
-            <h3 class="text-2xl font-bold mb-4 text-white text-center">
-                Ingresa el código para recibir una sorpresa...
+            <h3 class="text-3xl font-bold mb-4 text-white text-center">
+                CÓDIGO DE ACCESO:
             </h3>
             <form id="access-form" class="space-y-4">
                 <div>
-                    <label for="passcode" class="block text-sm font-medium text-gray-200 mb-1">Código de Acceso</label>
+                    <label for="passcode" class="block text-sm font-medium text-gray-200 mb-1">Te daremos una pista: Es la fecha de estreno.</label>
                     <input type="password" id="passcode" name="passcode" class="w-full p-2 rounded-lg text-white text-center tracking-widest" placeholder="----" maxlength="4" pattern="[0-9]*" inputmode="numeric">
                 </div>
                 <button type="submit" class="w-full px-4 py-2 bg-blue-300 text-white font-bold rounded-lg shadow-lg hover:bg-blue-450 transition-colors duration-200">
@@ -112,17 +87,13 @@
             <div id="message" class="mt-4 text-center text-sm font-bold"></div>
         </div>
         
-        <!-- Créditos de la tipografía -->
-        <div class="mt-8 text-xs text-gray-300">
-            <p>Font: <a href="https://fonts.google.com/specimen/Bytesized?query=pixel" target="_blank" class="hover:underline">Bytesized</a>, designed by <span class="font-bold">Baltdev</span>.</p>
-        </div>
-    </main>
+
 
     <script>
         const form = document.getElementById('access-form');
         const passcodeInput = document.getElementById('passcode');
         const messageDiv = document.getElementById('message');
-        const correctCode = '1234'; // Puedes cambiar este código si lo deseas
+        const correctCode = '1508'; // Puedes cambiar este código si lo deseas
 
         form.addEventListener('submit', (e) => {
             e.preventDefault();

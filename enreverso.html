@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Acceso En Reverso!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Importa la tipografía personalizada "The Youth" */
+        @font-face {
+            font-family: 'The Youth';
+            /* ¡IMPORTANTE! Asegúrate de que el archivo TheYouth.ttf esté en la misma carpeta que este archivo HTML en tu repositorio de GitHub. */
+            src: url('TheYouth.ttf') format('truetype'); 
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        /* Importa la tipografía Tiny5 desde el archivo local */
+        @font-face {
+            font-family: 'Tiny5';
+            src: url('Tiny5-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        body {
+            font-family: 'Tiny5', sans-serif;
+            color: #d1d5db;
+
+            /* Propiedades para el fondo de la imagen */
+            background-image: url('EN REVERSO PORTADA.jpg');
+            background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+            background-position: center; /* Centra la imagen */
+            background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+        }
+        
+        .title-font {
+            font-family: 'The Youth', sans-serif;
+        }
+        .letras-brillantes {
+            text-shadow: 0 0 5px #60a5fa, 0 0 20px #22388E, 0 0 30px #60a5fa;
+        }
+
+        /* Animación de pulso para la visualización */
+        @keyframes pulse-glow {
+            0% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+            50% {
+                transform: scale(1.1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.7;
+            }
+        }
+        .visualization-pulse {
+            width: 100px;
+            height: 100px;
+            background: rgba(96, 165, 250, 0.5); /* Azul claro semi-transparente */
+            border-radius: 50%;
+            margin: 2rem auto;
+            animation: pulse-glow 2s infinite ease-in-out;
+            box-shadow: 0 0 10px rgba(96, 165, 250, 0.8), 0 0 20px rgba(96, 165, 250, 0.6);
+        }
+
+        /* Contenedor principal con fondo semi-transparente para mejorar la legibilidad */
+        .main-container {
+            background-color: rgba(24, 25, 53, 0.8); /* Fondo oscuro con 80% de opacidad */
+            padding: 2rem;
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen p-4 text-center">
+    <main class="w-full max-w-2xl mx-auto main-container">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 md:mb-16 letras-brillantes title-font text-white">
+            En Reverso
+        </h1>
+        <p class="text-lg sm:text-xl text-gray-100 mb-10 md:mb-16">
+            Bienvenido al portal. Disfruta tu estadía
+        </p>
+        
+        <!-- Contenedor de botones con espacio y ancho fijo para que se vean iguales -->
+        <div class="flex flex-col items-center space-y-4 mb-8">
+            <a href="https://open.spotify.com/intl-es/album/3VnULzEls0BuYpKNUvF20U?si=0C_ySYmCRqmOvksROHj7KA" target="_blank" class="w-full md:w-64 p-4 text-center bg-purple-500 text-white font-bold rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-200">
+                ESCUCHA EN SPOTIFY 
+            </a>
+
+            <a href="https://music.apple.com/mx/album/en-reverso/1832139118?i=1832139119" target="_blank" class="w-full md:w-64 p-4 text-center bg-purple-500 text-white font-bold rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-200">
+                ESCUCHA EN APPLE MUSIC 
+            </a>
+
+            <a href="https://www.deezer.com/es/album/801289341" target="_blank" class="w-full md:w-64 p-4 text-center bg-purple-500 text-white font-bold rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-200">
+                ESCUCHA EN DEEZER 
+            </a>
+            
+            <a href="https://music.amazon.com.mx/albums/B0FLLN2R4T" target="_blank" class="w-full md:w-64 p-4 text-center bg-purple-500 text-white font-bold rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-200">
+                ESCUCHA EN AMAZON MUSIC 
+            </a>
+            
+            <a href="https://tidal.com/browse/album/452836945" target="_blank" class="w-full md:w-64 p-4 text-center bg-purple-500 text-white font-bold rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-200">
+                ESCUCHA EN TIDAL 
+            </a>
+        </div>
+        
+        <p class="text-lg sm:text-xl text-gray-100 mb-8 md:mb-12">
+             Estreno 15 de agosto a las 00:00
+        </p>
+        </p>
+
+        <!-- Contenedor del video de YouTube -->
+        <div class="mb-8 overflow-hidden rounded-lg shadow-xl relative w-full pt-[56.25%]">
+            <iframe
+                class="absolute top-0 left-0 w-full h-full"
+                src="https://www.youtube.com/embed/Mo17c1hxsAk"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="text-lg sm:text-xl text-gray-100 mb-8 md:mb-12">
+            VIDEO MUSICAL
+        </p>
+        
+        <!-- Se ha agregado la imagen de la portada de la canción -->
+        <img src="EN REVERSO PORTADA.jpg" alt="Portada de la canción 'En Reverso'" class="w-full h-auto max-w-sm mx-auto rounded-lg shadow-lg mb-8"/>
+        
+        <!-- Puedes agregar aquí cualquier contenido especial, como un video, un mensaje exclusivo, etc. -->
+        <div class="mt-8 text-center">
+             <a href="index.html" class="px-6 py-2 bg-blue-300 text-white font-bold rounded-lg shadow-lg hover:bg-blue-450 transition-colors duration-200">
+                Gracias por participar:D Regresar al inicio
+            </a>
+        </div>
+    </main>
+</body>
+</html>
